@@ -17,6 +17,33 @@ class HomeView extends StatelessWidget {
           onPressed: () {},
         ),
       ),
+      body: ListView(
+        children: <Widget>[
+          ListTile(
+            leading: Container(
+              width: 48,
+              height: 48,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                borderRadius: BorderRadius.circular(48),
+                image: DecorationImage(
+                  image:
+                      NetworkImage("https://balta.io/imgs/andrebaltieri.jpg"),
+                ),
+              ),
+            ),
+            title: Text("Pedro"),
+            subtitle: Text("oi"),
+            trailing: FlatButton(
+              onPressed: () {},
+              child: Icon(
+                Icons.chat,
+                color: Theme.of(context).primaryColor,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
