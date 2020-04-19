@@ -1,3 +1,4 @@
+import 'package:contacts/android/views/details.view.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -35,7 +36,14 @@ class HomeView extends StatelessWidget {
             title: Text("Pedro"),
             subtitle: Text("oi"),
             trailing: FlatButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailsView(),
+                  ),
+                );
+              },
               child: Icon(
                 Icons.chat,
                 color: Theme.of(context).primaryColor,
@@ -43,6 +51,14 @@ class HomeView extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Theme.of(context).primaryColor,
+        child: Icon(
+          Icons.add,
+          color: Theme.of(context).accentColor,
+        ),
       ),
     );
   }
